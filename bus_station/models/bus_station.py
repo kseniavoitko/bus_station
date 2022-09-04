@@ -14,6 +14,6 @@ class BusStation(models.Model):
         """ Display 'city name' """
         res = []
         for field in self:
-            name = field.city + ' ' + field.name
+            name = field.city + ', ' + field.name
             res.append((field.id, name))
         return res

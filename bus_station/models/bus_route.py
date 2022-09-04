@@ -11,10 +11,8 @@ class BusRoute(models.Model):
     station_from_id = fields.Many2one(comodel_name='bus.station', string='From', required=True)
     station_to_id = fields.Many2one(comodel_name='bus.station', string='To', required=True)
 
-    def name_get(self):
-        """ Display 'station_from_id-station_to_id' """
-        res = []
-        for field in self:
-            name = str(field.station_from_id) + '-' + str(field.station_to_id)
-            res.append((field.id, name))
-        return res
+    @api.onchange('station_from_id', 'station_to_id')
+    def _onchange_station(self):
+        if self.station_from_id and self.station_to_id:
+            self.name = self.station_from_id.city + ', ' + self.station_from_id.name + '-' + \
+                        self.station_to_id.city + ', ' + self.station_to_id.name

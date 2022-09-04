@@ -8,6 +8,7 @@
                 <sheet>
                     <group>
                         <field name="active"/>
+                        <field name="name"/>
                         <field name="station_from_id"/>
                         <field name="station_to_id"/>
                     </group>

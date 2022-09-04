@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="bus_route_kyiv_odessa" model="bus.route" forcecreate="True">
+        <field name="name">Kyiv, central-Odessa, starosenna</field>
+        <field name="station_from_id" ref="bus_station_kyiv_central"/>
+        <field name="station_to_id" ref="bus_station_starosenna"/>
+    </record>
+
+    <record id="bus_route_kyiv_vinnitsa" model="bus.route" forcecreate="True">
+        <field name="name">Kyiv, central-Vinnitsa, central</field>
+        <field name="station_from_id" ref="bus_station_kyiv_central"/>
+        <field name="station_to_id" ref="bus_station_vinnitsa_central"/>
+    </record>
+
+    <record id="bus_route_odessa_vinnitsa" model="bus.route" forcecreate="True">
+        <field name="name">Jdessa, starosenna-Vinnitsa, central</field>
+        <field name="station_from_id" ref="bus_station_starosenna"/>
+        <field name="station_to_id" ref="bus_station_vinnitsa_central"/>
+    </record>
+
+</odoo>
