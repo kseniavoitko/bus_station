@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="bus_station_starosenna" model="bus.station" forcecreate="True">
+        <field name="name">Starosenna</field>
+        <field name="city">Odessa</field>
+    </record>
+
+    <record id="bus_station_kyiv_central" model="bus.station" forcecreate="True">
+        <field name="name">Central</field>
+        <field name="city">Kyiv</field>
+    </record>
+
+    <record id="bus_station_vinnitsa_central" model="bus.station" forcecreate="True">
+        <field name="name">Central</field>
+        <field name="city">Vinnitsa</field>
+    </record>
+
+</odoo>

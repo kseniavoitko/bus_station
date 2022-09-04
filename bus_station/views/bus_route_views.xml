@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bus_route_form" model="ir.ui.view">
+        <field name="name">bus.route.form</field>
+        <field name="model">bus.route</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="active"/>
+                        <field name="station_from_id"/>
+                        <field name="station_to_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="bus_route_tree" model="ir.ui.view">
+        <field name="name">bus.route.tree</field>
+        <field name="model">bus.route</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="bus_route_act_window" model="ir.actions.act_window">
+        <field name="name">Routes</field>
+        <field name="res_model">bus.route</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Routes"
+              id="bus.route"
+              parent="bus_station.menu_root"
+              action="bus_route_act_window"/>
+</odoo>

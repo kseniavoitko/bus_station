@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bus_transport_form" model="ir.ui.view">
+        <field name="name">bus.transport.form</field>
+        <field name="model">bus.transport</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="active"/>
+                        <field name="name"/>
+                        <field name="bus_number"/>
+                        <field name="seats"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="bus_transport_tree" model="ir.ui.view">
+        <field name="name">bus.transport.tree</field>
+        <field name="model">bus.transport</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="bus_number"/>
+                <field name="seats"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="bus_transport_act_window" model="ir.actions.act_window">
+        <field name="name">Transports</field>
+        <field name="res_model">bus.transport</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Transports"
+              id="bus.transport"
+              parent="bus_station.menu_root"
+              action="bus_transport_act_window"/>
+</odoo>

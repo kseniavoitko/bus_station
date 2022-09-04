@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="bus_transport_mercedes" model="bus.transport" forcecreate="True">
+        <field name="name">Mercedes 7644</field>
+        <field name="bus_number">AB 7644 AK</field>
+        <field name="seats">20</field>
+    </record>
+
+     <record id="bus_transport_volkswagen" model="bus.transport" forcecreate="True">
+        <field name="name">Volkswagen 7999</field>
+        <field name="bus_number">AB 7999 AK</field>
+        <field name="seats">20</field>
+    </record>
+
+    <record id="bus_transport_reno" model="bus.transport" forcecreate="True">
+        <field name="name">Reno 7622</field>
+        <field name="bus_number">AB 7622 AK</field>
+        <field name="seats">40</field>
+    </record>
+
+</odoo>

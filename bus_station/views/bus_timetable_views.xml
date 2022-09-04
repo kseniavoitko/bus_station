@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bus_timetable_form" model="ir.ui.view">
+        <field name="name">bus.timetable.form</field>
+        <field name="model">bus.timetable</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="active"/>
+                            <field name="name"/>
+<!--                            <field name="route_id"/>-->
+                            <field name="departure_datetime"/>
+                            <field name="arrival_datetime"/>
+                            <field name="duration_time"/>
+                        </group>
+                        <group>
+<!--                            <field name="driver_id"/>-->
+                            <field name="transport_id"/>
+                            <field name="bus_number"/>
+                            <field name="seats"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="bus_timetable_tree" model="ir.ui.view">
+        <field name="name">bus.timetable.tree</field>
+        <field name="model">bus.timetable</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="bus_number"/>
+<!--                <field name="route_id"/>-->
+                <field name="departure_datetime"/>
+                <field name="arrival_datetime"/>
+                <field name="duration_time"/>
+                <field name="seats"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="bus_timetable_act_window" model="ir.actions.act_window">
+        <field name="name">Timetable</field>
+        <field name="res_model">bus.timetable</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Timetable"
+              id="bus.timetable"
+              parent="bus_station.menu_root"
+              action="bus_timetable_act_window"/>
+</odoo>
