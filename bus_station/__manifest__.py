@@ -18,6 +18,9 @@
         'views/bus_station_views.xml',
         'views/bus_timetable_views.xml',
         'views/bus_transport_views.xml',
+        'wizard/create_timetable_wizard_views.xml',
+        'report/bus_timetable_reports_templates.xml',
+        'report/bus_timetable_report.xml',
     ],
     'demo': [
         'data/bus_transport_demo.xml',
@@ -25,9 +28,6 @@
         'data/bus_route_demo.xml',
         'data/res_partner_demo.xml',
         'data/bus_timetable_demo.xml',
-        'wizard/create_timetable_wizard_views.xml',
-        'report/bus_timetable_report.xml',
-        'report/bus_timetable_reports_templates.xml',
     ],
 
 }
