@@ -11,6 +11,8 @@
     'depends': ['base'],
 
     'data': [
+        'security/bus_groups.xml',
+        'security/bus_security.xml',
         'security/ir.model.access.csv',
         'views/bus_station_menus.xml',
         'views/res_partner_views.xml',

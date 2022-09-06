@@ -1,25 +1,42 @@
 <odoo>
 
     <template id="info">
-        <span t-esc="doc.route_id"/>
+        <strong>
+            <span t-esc="doc.route_id.name"/>
+            <br/>
+            <br/>
+            <span t-esc="doc.driver_id.name"/>
+            <br/>
+            <br/>
+        </strong>
+        <strong>
+            Transport:
+        </strong>
         <br/>
-        <span t-esc="doc.driver_id"/>
+        <span t-esc="doc.transport_id.name"/>
         <br/>
-        <span t-esc="doc.transport_id"/>
-        <br/>
+        Number
         <span t-esc="doc.bus_number"/>
         <br/>
+        Seats
         <span t-esc="doc.seats"/>
         <br/>
+        <br/>
+        <strong>
+            Departure
+        </strong>
         <span t-esc="doc.departure_datetime"/>
         <br/>
+        <strong>
+            Arrival
+        </strong>
         <span t-esc="doc.arrival_datetime"/>
     </template>
 
     <template id="report_timetable">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
-                <t t-call="bus.info"/>
+                <t t-call="bus_station.info"/>
             </t>
         </t>
     </template>
