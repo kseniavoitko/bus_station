@@ -1,22 +1,21 @@
 <odoo>
-    <data>
-        <record id="paperformat_lowmargin" model="report.paperformat">
-            <field name="name">European A4 low margin</field>
-            <field name="default" eval="True"/>
-            <field name="format">A4</field>
-            <field name="page_height">0</field>
-            <field name="page_width">0</field>
-            <field name="orientation">Portrait</field>
-            <field name="margin_top">1</field>
-            <field name="margin_bottom">1</field>
-            <field name="margin_left">1</field>
-            <field name="margin_right">1</field>
-            <field name="header_line" eval="False"/>
-            <field name="header_spacing">0</field>
-            <field name="dpi">90</field>
-        </record>
+    <record id="paperformat_lowmargin" model="report.paperformat">
+        <field name="name">European A4 low margin</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">1</field>
+        <field name="margin_bottom">1</field>
+        <field name="margin_left">1</field>
+        <field name="margin_right">1</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+    </record>
 
-        <report
+    <report
             id="action_report_timetable"
             string="Timetable Report"
             model="bus.timetable"
@@ -25,7 +24,6 @@
             name="bus_station.report_timetable"
             paperformat="paperformat_lowmargin"
             print_report_name="'Route - %s' % (object.route_id)"
-        />
+    />
 
-    </data>
 </odoo>
