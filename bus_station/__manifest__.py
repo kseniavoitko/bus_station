@@ -13,7 +13,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/bus_station_menus.xml',
-        'views/bus_driver_views.xml',
+        'views/res_partner_views.xml',
         'views/bus_route_views.xml',
         'views/bus_station_views.xml',
         'views/bus_timetable_views.xml',
@@ -23,6 +23,11 @@
         'data/bus_transport_demo.xml',
         'data/bus_station_demo.xml',
         'data/bus_route_demo.xml',
+        'data/res_partner_demo.xml',
+        'data/bus_timetable_demo.xml',
+        'wizard/create_timetable_wizard_views.xml',
+        'report/bus_timetable_report.xml',
+        'report/bus_timetable_reports_templates.xml',
     ],
 
 }

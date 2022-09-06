@@ -14,7 +14,7 @@
     </record>
 
     <record id="bus_route_odessa_vinnitsa" model="bus.route" forcecreate="True">
-        <field name="name">Jdessa, starosenna-Vinnitsa, central</field>
+        <field name="name">Odessa, starosenna-Vinnitsa, central</field>
         <field name="station_from_id" ref="bus_station_starosenna"/>
         <field name="station_to_id" ref="bus_station_vinnitsa_central"/>
     </record>

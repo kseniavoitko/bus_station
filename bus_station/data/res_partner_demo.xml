@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="base.res_partner_address_15" model="res.partner">
+        <field name="is_driver" eval="True"/>
+    </record>
+
+    <record id="base.res_partner_address_28" model="res.partner">
+        <field name="is_driver" eval="True"/>
+    </record>
+
+    <record id="base.res_partner_address_16" model="res.partner">
+        <field name="is_driver" eval="True"/>
+    </record>
+
+</odoo>

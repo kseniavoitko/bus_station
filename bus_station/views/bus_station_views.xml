@@ -27,10 +27,22 @@
         </field>
     </record>
 
+    <record id="hr_hospital_bus_station" model="ir.ui.view">
+        <field name="name">bus.station.pivot</field>
+        <field name="model">bus.station</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="city" type="row"/>
+                <field name="name" type="row"/>
+                <field name="qty" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
     <record id="bus_station_act_window" model="ir.actions.act_window">
         <field name="name">Stations</field>
         <field name="res_model">bus.station</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,pivot</field>
     </record>
 
     <menuitem name="Stations"

@@ -9,6 +9,7 @@ class BusStation(models.Model):
     active = fields.Boolean(
         default=True, )
     city = fields.Char(required=True)
+    qty = fields.Integer(default=1)
 
     def name_get(self):
         """ Display 'city name' """

@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
 
-    <record id="bus_timetable_starosenna" model="bus.timetable" forcecreate="True">
-        <field name="name">Starosenna</field>
-        <field name="city">Odessa</field>
+    <record id="bus_timetable_1" model="bus.timetable" forcecreate="True">
+        <field name="route_id" ref="bus_route_kyiv_odessa"/>
+        <field name="driver_id" ref="base.res_partner_address_15"/>
+        <field name="transport_id" ref="bus_transport_mercedes"/>
+        <field name="departure_datetime" eval="datetime.now() - timedelta(hours=5,minutes=30)"/>
+        <field name="arrival_datetime" eval="datetime.now() + timedelta(hours=1)"/>
     </record>
 
+    <record id="bus_timetable_2" model="bus.timetable" forcecreate="True">
+        <field name="route_id" ref="bus_route_kyiv_vinnitsa"/>
+        <field name="driver_id" ref="base.res_partner_address_28"/>
+        <field name="transport_id" ref="bus_transport_volkswagen"/>
+        <field name="departure_datetime" eval="datetime.now() - timedelta(hours=1,minutes=30)"/>
+        <field name="arrival_datetime" eval="datetime.now() + timedelta(hours=2)"/>
+    </record>
 
+    <record id="bus_timetable_3" model="bus.timetable" forcecreate="True">
+        <field name="route_id" ref="bus_route_odessa_vinnitsa"/>
+        <field name="driver_id" ref="base.res_partner_address_16"/>
+        <field name="transport_id" ref="bus_transport_reno"/>
+        <field name="departure_datetime" eval="datetime.now()"/>
+        <field name="arrival_datetime" eval="datetime.now() + timedelta(hours=3)"/>
+    </record>
 
 </odoo>
